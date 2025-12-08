@@ -13,13 +13,15 @@ For additional information see the Model Card paper: https://arxiv.org/pdf/1810.
 **Developer:** Machine Learning Team
 
 **Model Architecture:** Ensemble learning method using multiple decision trees
+
 - Algorithm: Random Forest (scikit-learn implementation)
 - Number of estimators: 100 trees
 - Max depth: 10 levels
 - Random state: 42 (for reproducibility)
 - Parallel processing: Enabled (n_jobs=-1)
 
-**Input Features:** 
+**Input Features:**
+
 - Continuous: age, fnlgt, education-num, capital-gain, capital-loss, hours-per-week
 - Categorical (one-hot encoded): workclass, education, marital-status, occupation, relationship, race, sex, native-country
 
@@ -28,16 +30,19 @@ For additional information see the Model Card paper: https://arxiv.org/pdf/1810.
 ## Intended Use
 
 **Primary Use Cases:**
+
 - Income prediction for demographic and economic research
 - Educational tool for understanding machine learning pipelines in production
 - Demonstration of bias detection and fairness evaluation in ML models
 
 **Target Users:**
+
 - Data scientists and ML practitioners learning production ML deployment
 - Researchers analyzing income inequality patterns
 - Students in machine learning courses
 
 **Out-of-Scope Uses:**
+
 - Making actual financial decisions about individuals
 - Credit scoring or loan approval systems
 - Any high-stakes decision-making without human oversight
@@ -47,17 +52,19 @@ For additional information see the Model Card paper: https://arxiv.org/pdf/1810.
 
 **Dataset:** UCI Census Income Dataset (1994 Census database)
 
-**Source:** https://archive.ics.uci.edu/ml/datasets/census+income
+**Source:** [UCI Census Income Dataset](https://archive.ics.uci.edu/ml/datasets/census+income)
 
 **Size:** ~26,000 samples (80% of cleaned dataset after train-test split)
 
 **Data Preprocessing:**
+
 1. Removal of leading/trailing whitespace from all columns and values
 2. Duplicate record removal
 3. One-hot encoding of categorical features using scikit-learn's OneHotEncoder
 4. Label binarization of target variable (<=50K vs >50K)
 
 **Features:**
+
 - **Demographics:** age, race, sex, native-country
 - **Education:** education level, education-num (years of education)
 - **Employment:** workclass, occupation, hours-per-week
@@ -103,28 +110,33 @@ Model performance varies across different demographic groups. Detailed slice ana
 - Variation in performance across demographic groups (race, sex) should be monitored for fairness
 
 **Baseline Comparison:**
+
 - Majority class baseline (always predict <=50K): ~75% accuracy but 0% recall for >50K class
 - This model significantly outperforms naive baselines by actually learning patterns
 
 ## Ethical Considerations
 
 **Bias and Fairness:**
+
 - The model is trained on 1994 census data, which may not reflect current socioeconomic patterns
 - Historical biases in the data (e.g., gender pay gaps, racial disparities) are likely encoded in the model
 - Performance disparities across demographic groups have been documented in slice analysis
 - The model should NOT be used for any decision-making that could reinforce existing inequalities
 
 **Protected Attributes:**
+
 - The model uses sensitive attributes (race, sex, native-country) as features
 - This creates potential for discriminatory outcomes if used inappropriately
 - Fair lending laws (ECOA, Fair Credit Reporting Act) prohibit use of such models in credit decisions
 
 **Privacy:**
+
 - Training data is publicly available census data (anonymized)
 - No personally identifiable information (PII) is stored or processed
 - The model should not be used to make predictions about specific, identifiable individuals
 
 **Transparency:**
+
 - Model architecture and hyperparameters are fully documented
 - Training process and data preprocessing steps are transparent
 - Slice performance analysis enables fairness auditing

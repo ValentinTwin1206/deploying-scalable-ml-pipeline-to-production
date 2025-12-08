@@ -205,7 +205,6 @@ def main() -> int:
             lb=lb
         )
         
-        
         # Save slice performance to file
         with open(slice_output_path, "w") as f:
             f.write("Model Performance on Categorical Feature Slices\n")
