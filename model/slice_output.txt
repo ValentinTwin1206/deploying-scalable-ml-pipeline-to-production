@@ -1,0 +1,126 @@
+Model Performance on Categorical Feature Slices
+================================================================================
+
+
+Feature: workclass
+--------------------------------------------------------------------------------
+  Value: Private                        | Precision: 0.8145 | Recall: 0.5162 | F-beta: 0.6319 | Samples: 4492
+  Value: Self-emp-inc                   | Precision: 0.8305 | Recall: 0.6901 | F-beta: 0.7538 | Samples: 259
+  Value: Self-emp-not-inc               | Precision: 0.7453 | Recall: 0.5338 | F-beta: 0.6220 | Samples: 495
+  Value: ?                              | Precision: 0.6250 | Recall: 0.2381 | F-beta: 0.3448 | Samples: 369
+  Value: Local-gov                      | Precision: 0.7778 | Recall: 0.5385 | F-beta: 0.6364 | Samples: 420
+  Value: State-gov                      | Precision: 0.7869 | Recall: 0.6957 | F-beta: 0.7385 | Samples: 274
+  Value: Federal-gov                    | Precision: 0.8222 | Recall: 0.4805 | F-beta: 0.6066 | Samples: 192
+  Value: Without-pay                    | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 2
+  Value: Never-worked                   | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 5
+
+Feature: education
+--------------------------------------------------------------------------------
+  Value: 10th                           | Precision: 1.0000 | Recall: 0.1000 | F-beta: 0.1818 | Samples: 163
+  Value: HS-grad                        | Precision: 1.0000 | Recall: 0.1815 | F-beta: 0.3073 | Samples: 2057
+  Value: Some-college                   | Precision: 0.9259 | Recall: 0.2294 | F-beta: 0.3676 | Samples: 1487
+  Value: Masters                        | Precision: 0.7943 | Recall: 0.8877 | F-beta: 0.8384 | Samples: 351
+  Value: Bachelors                      | Precision: 0.7437 | Recall: 0.8219 | F-beta: 0.7808 | Samples: 1092
+  Value: 12th                           | Precision: 1.0000 | Recall: 0.3333 | F-beta: 0.5000 | Samples: 81
+  Value: Assoc-voc                      | Precision: 0.9375 | Recall: 0.3529 | F-beta: 0.5128 | Samples: 320
+  Value: 11th                           | Precision: 1.0000 | Recall: 0.2500 | F-beta: 0.4000 | Samples: 224
+  Value: Prof-school                    | Precision: 0.8404 | Recall: 0.9080 | F-beta: 0.8729 | Samples: 120
+  Value: Assoc-acdm                     | Precision: 0.9091 | Recall: 0.4082 | F-beta: 0.5634 | Samples: 195
+  Value: 5th-6th                        | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 66
+  Value: 7th-8th                        | Precision: 1.0000 | Recall: 0.1429 | F-beta: 0.2500 | Samples: 123
+  Value: 9th                            | Precision: 1.0000 | Recall: 0.3333 | F-beta: 0.5000 | Samples: 102
+  Value: Doctorate                      | Precision: 0.7705 | Recall: 0.8704 | F-beta: 0.8174 | Samples: 82
+  Value: 1st-4th                        | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 34
+  Value: Preschool                      | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 11
+
+Feature: marital-status
+--------------------------------------------------------------------------------
+  Value: Divorced                       | Precision: 0.9697 | Recall: 0.3368 | F-beta: 0.5000 | Samples: 914
+  Value: Never-married                  | Precision: 0.9615 | Recall: 0.2632 | F-beta: 0.4132 | Samples: 2099
+  Value: Married-civ-spouse             | Precision: 0.7911 | Recall: 0.5719 | F-beta: 0.6639 | Samples: 3011
+  Value: Married-spouse-absent          | Precision: 1.0000 | Recall: 0.1667 | F-beta: 0.2857 | Samples: 75
+  Value: Widowed                        | Precision: 1.0000 | Recall: 0.4211 | F-beta: 0.5926 | Samples: 209
+  Value: Separated                      | Precision: 0.8000 | Recall: 0.2857 | F-beta: 0.4211 | Samples: 196
+  Value: Married-AF-spouse              | Precision: 1.0000 | Recall: 0.0000 | F-beta: 0.0000 | Samples: 4
+
+Feature: occupation
+--------------------------------------------------------------------------------
+  Value: Machine-op-inspct              | Precision: 0.6875 | Recall: 0.2340 | F-beta: 0.3492 | Samples: 401
+  Value: Other-service                  | Precision: 1.0000 | Recall: 0.1053 | F-beta: 0.1905 | Samples: 680
+  Value: Sales                          | Precision: 0.7647 | Recall: 0.4740 | F-beta: 0.5852 | Samples: 700
+  Value: Prof-specialty                 | Precision: 0.7730 | Recall: 0.7769 | F-beta: 0.7749 | Samples: 877
+  Value: Handlers-cleaners              | Precision: 0.7143 | Recall: 0.2778 | F-beta: 0.4000 | Samples: 257
+  Value: ?                              | Precision: 0.6250 | Recall: 0.2381 | F-beta: 0.3448 | Samples: 374
+  Value: Adm-clerical                   | Precision: 0.7500 | Recall: 0.4286 | F-beta: 0.5455 | Samples: 744
+  Value: Transport-moving               | Precision: 0.7826 | Recall: 0.2368 | F-beta: 0.3636 | Samples: 325
+  Value: Craft-repair                   | Precision: 0.7910 | Recall: 0.2804 | F-beta: 0.4141 | Samples: 791
+  Value: Exec-managerial                | Precision: 0.8785 | Recall: 0.6998 | F-beta: 0.7790 | Samples: 810
+  Value: Tech-support                   | Precision: 0.7857 | Recall: 0.4400 | F-beta: 0.5641 | Samples: 178
+  Value: Farming-fishing                | Precision: 0.7857 | Recall: 0.4074 | F-beta: 0.5366 | Samples: 196
+  Value: Protective-serv                | Precision: 0.8500 | Recall: 0.2881 | F-beta: 0.4304 | Samples: 144
+  Value: Priv-house-serv                | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 29
+  Value: Armed-Forces                   | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 2
+
+Feature: relationship
+--------------------------------------------------------------------------------
+  Value: Not-in-family                  | Precision: 0.9412 | Recall: 0.2840 | F-beta: 0.4364 | Samples: 1636
+  Value: Husband                        | Precision: 0.7880 | Recall: 0.5787 | F-beta: 0.6673 | Samples: 2659
+  Value: Other-relative                 | Precision: 0.6667 | Recall: 0.5000 | F-beta: 0.5714 | Samples: 172
+  Value: Own-child                      | Precision: 1.0000 | Recall: 0.3333 | F-beta: 0.5000 | Samples: 1037
+  Value: Unmarried                      | Precision: 1.0000 | Recall: 0.3542 | F-beta: 0.5231 | Samples: 699
+  Value: Wife                           | Precision: 0.8261 | Recall: 0.5170 | F-beta: 0.6360 | Samples: 305
+
+Feature: race
+--------------------------------------------------------------------------------
+  Value: White                          | Precision: 0.8057 | Recall: 0.5330 | F-beta: 0.6416 | Samples: 5572
+  Value: Black                          | Precision: 0.8367 | Recall: 0.4940 | F-beta: 0.6212 | Samples: 625
+  Value: Asian-Pac-Islander             | Precision: 0.7045 | Recall: 0.6078 | F-beta: 0.6526 | Samples: 191
+  Value: Other                          | Precision: 0.3333 | Recall: 0.5000 | F-beta: 0.4000 | Samples: 48
+  Value: Amer-Indian-Eskimo             | Precision: 1.0000 | Recall: 0.5714 | F-beta: 0.7273 | Samples: 72
+
+Feature: sex
+--------------------------------------------------------------------------------
+  Value: Female                         | Precision: 0.8640 | Recall: 0.4372 | F-beta: 0.5806 | Samples: 2120
+  Value: Male                           | Precision: 0.7944 | Recall: 0.5507 | F-beta: 0.6504 | Samples: 4388
+
+Feature: native-country
+--------------------------------------------------------------------------------
+  Value: United-States                  | Precision: 0.8136 | Recall: 0.5270 | F-beta: 0.6397 | Samples: 5878
+  Value: Mexico                         | Precision: 0.5000 | Recall: 0.4000 | F-beta: 0.4444 | Samples: 117
+  Value: Germany                        | Precision: 0.6667 | Recall: 0.5714 | F-beta: 0.6154 | Samples: 29
+  Value: India                          | Precision: 0.6250 | Recall: 0.8333 | F-beta: 0.7143 | Samples: 22
+  Value: Iran                           | Precision: 0.6667 | Recall: 1.0000 | F-beta: 0.8000 | Samples: 9
+  Value: Poland                         | Precision: 1.0000 | Recall: 0.3333 | F-beta: 0.5000 | Samples: 8
+  Value: Puerto-Rico                    | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 20
+  Value: Yugoslavia                     | Precision: 0.6667 | Recall: 1.0000 | F-beta: 0.8000 | Samples: 6
+  Value: El-Salvador                    | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 20
+  Value: Nicaragua                      | Precision: 0.0000 | Recall: 1.0000 | F-beta: 0.0000 | Samples: 10
+  Value: ?                              | Precision: 0.9000 | Recall: 0.6923 | F-beta: 0.7826 | Samples: 100
+  Value: Columbia                       | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 13
+  Value: Dominican-Republic             | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 14
+  Value: Philippines                    | Precision: 0.7692 | Recall: 0.6250 | F-beta: 0.6897 | Samples: 42
+  Value: Cuba                           | Precision: 0.6667 | Recall: 0.5000 | F-beta: 0.5714 | Samples: 20
+  Value: Taiwan                         | Precision: 1.0000 | Recall: 0.6667 | F-beta: 0.8000 | Samples: 12
+  Value: Japan                          | Precision: 0.0000 | Recall: 0.0000 | F-beta: 0.0000 | Samples: 10
+  Value: Haiti                          | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 9
+  Value: Guatemala                      | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 9
+  Value: Trinadad&Tobago                | Precision: 1.0000 | Recall: 0.0000 | F-beta: 0.0000 | Samples: 3
+  Value: China                          | Precision: 0.5000 | Recall: 1.0000 | F-beta: 0.6667 | Samples: 11
+  Value: France                         | Precision: 0.6667 | Recall: 0.4000 | F-beta: 0.5000 | Samples: 9
+  Value: South                          | Precision: 0.0000 | Recall: 0.0000 | F-beta: 0.0000 | Samples: 13
+  Value: Ireland                        | Precision: 1.0000 | Recall: 0.3333 | F-beta: 0.5000 | Samples: 6
+  Value: Italy                          | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 11
+  Value: Thailand                       | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 2
+  Value: Portugal                       | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 5
+  Value: England                        | Precision: 0.8000 | Recall: 0.8000 | F-beta: 0.8000 | Samples: 18
+  Value: Jamaica                        | Precision: 1.0000 | Recall: 0.0000 | F-beta: 0.0000 | Samples: 13
+  Value: Vietnam                        | Precision: 0.0000 | Recall: 1.0000 | F-beta: 0.0000 | Samples: 11
+  Value: Ecuador                        | Precision: 0.0000 | Recall: 1.0000 | F-beta: 0.0000 | Samples: 5
+  Value: Canada                         | Precision: 0.4000 | Recall: 0.2857 | F-beta: 0.3333 | Samples: 24
+  Value: Hungary                        | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 2
+  Value: Outlying-US(Guam-USVI-etc)     | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 5
+  Value: Peru                           | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 5
+  Value: Honduras                       | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 5
+  Value: Cambodia                       | Precision: 1.0000 | Recall: 0.5000 | F-beta: 0.6667 | Samples: 4
+  Value: Greece                         | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 3
+  Value: Laos                           | Precision: 1.0000 | Recall: 1.0000 | F-beta: 1.0000 | Samples: 3
