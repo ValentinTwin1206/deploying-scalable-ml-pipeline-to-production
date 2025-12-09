@@ -6,14 +6,12 @@ FastAPI application for ML model inference on census data.
 import os
 import pathlib
 import pickle
-import sys
 from contextlib import asynccontextmanager
 from typing import Literal
 
 
 # third party libs
 import pandas as pd
-import uvicorn
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, ConfigDict, Field
 
@@ -21,9 +19,8 @@ from pydantic import BaseModel, ConfigDict, Field
 from starter.ml.data import process_data
 from starter.ml.model import inference
 
-# Global configuration
-API_HOST = os.getenv("API_HOST","0.0.0.0")
-API_PORT = int(os.getenv("API_PORT", 8001))
+# Global configuration - not needed for direct uvicorn usage
+# API_HOST and API_PORT removed as they will be passed via uvicorn command
 
 # Load model artifacts at startup
 model = None
@@ -241,26 +238,3 @@ async def predict(input_data: CensusInput) -> PredictionResponse:
     prediction_label = lb.inverse_transform(pred)[0]
     
     return PredictionResponse(prediction=prediction_label)
-
-
-def main() -> int:
-    """Main function to run the FastAPI application with uvicorn."""
-    
-    # boot server
-    try:
-        uvicorn.run(
-            "main:app",
-            host=API_HOST,
-            port=API_PORT,
-            reload=True
-        )
-        return 0
-    
-    except Exception as exp:
-        print("[ERRO] Failed to start server")
-        print(exp)
-        return 1
-
-
-if __name__ == "__main__":
-    sys.exit(main())
